@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="robots" content="noindex">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meine Rümpelhelden</title>
+
+  <link rel="icon" href="Held-removebg.png" type="image/icon type">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  {EDITOR CSS}
+  </style>
+
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">
+      <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="service.html">Unser Service</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <a>Kontakt</a>
+    </ul>
+    <div class="backdrop"></div>
+    <nav class="mobile-nav-links"></nav>
+    <div class="buttons">
+      <button class="menu-icon">&#9776;</button>
+      <div class="angebot">
+        <button onClick="window.location.href = 'index.html#kontakt-feld';">Kostenloses Angebot</button> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class=footer-logo>
+      <!--<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="150" alt="HB">-->
+      <!--<h4>HB Entrümpelungen</h4>
+      Mehr Platz für ein besseres Leben!-->
+      <img src="Entrümpelhelden-removebg.png" width="250" alt="HB">
+      <br>© 2023 Meine Rümpelhelden
+    </div>
+      <div class="footer-kontakt">
+         <p class="heading">KONTAKT</p>
+         <br>
+         <p>Wasserstraße 153<br>
+         28325 Bremen</p>
+         <br>
+         <p>Telefon: <a href="">1234 567890</a>
+         <br>Email: <a href="mailto: info@hb-entruempelungen.de">info@hb-entruempelungen.de</a></p>
+      </div>
+      <div class="footer-stunden">
+        <p class="heading">ARBEITSSTUNDEN</p>
+        <br>
+        <p>Mo - Fr: 8:00 - 20:00
+        <br>Samstag: 9:00 - 19:00 
+        <br>Sonntag: 9:00 - 20:00</p>
+        
+      </div>
+      <div class="footer-weiteres">
+        <p class="heading">WEITERES</p>
+        <br>
+        <a href="">Über uns</a>
+        <a href="">Unser Service</a>
+        <a href="">Impressum</a>
+        <a href="">FAQ</a>
+        <a href="">Datenschutzerklärung</a>
+      </div>
+    </div>
+  </div>
+  
+  <!--
+  <div class="footer-2">
+    Copyright © HB Entrümpelungen | <a href="">Impressum</a> | <a href="">Datenschutzerklärung</a>
+  </div>
+  -->
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const mobileNavLinks = document.querySelector('.mobile-nav-links');
+    const navLinks = document.querySelector('.header ul');
+    const backdrop = document.querySelector('.backdrop');
+
+    menuIcon.addEventListener('click', () => {
+    if (mobileNavLinks.classList.contains('show')) {
+        mobileNavLinks.innerHTML = '';
+        mobileNavLinks.classList.remove('show');
+        
+    } else {
+        mobileNavLinks.innerHTML = '<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="50">';
+        mobileNavLinks.innerHTML += navLinks.innerHTML;
+        mobileNavLinks.classList.add('show');
+        backdrop.style.display = 'block';
+    }
+    });
+
+    backdrop.addEventListener('click', (event) => {
+    if (event.target === backdrop) { // Check if the backdrop itself was clicked
+        mobileNavLinks.classList.remove('show');
+        backdrop.style.display = 'none';
+    }
+    });
+
+  //# sourceURL=pen.js
+  </script>
+
+</body>
+
+</html>
