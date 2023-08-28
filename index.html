@@ -15,28 +15,40 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/4bf7013d25.js" crossorigin="anonymous"></script>
   <style>
-  {EDITOR CSS}
   </style>
 
 </head>
 
 <body>
 
-    <div class="header">
+    <div class="header index-header">
+      <div class="first">
         <a href="index.html">
           <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" style="color: var(--bgc)">Home</a></li>
           <li><a href="about.html">Über uns</a></li>
-          <li><a href="service.html">Unser Service</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <a>Kontakt</a>
+          <li>
+            <div class="dropdown">
+              <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service<span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
+              <div class="dropdown-space"></div>
+              <div class="dropdown-menu">
+                <a href="ser-entruempelung.html">Entrümpelung</a>
+                <a href="ser-haushalt.html">Haushaltsauflösung</a>
+                <a href="ser-umzug.html">Umzug</a>
+                <a href="ser-brandschaden.html">Brandschadenbeseitigung</a>
+                <a href="ser-transport.html">Transport</a><br>
+                <a href="ser-entsorgung.html">Entsorgung</a>
+              </div>
+            </div>
+          </li> 
         </ul>
-        <div class="backdrop"></div>
         <nav class="mobile-nav-links"></nav>
+        <div class="backdrop"></div>
+        <button class="menu-icon">&#9776;</button>
+      </div>   
         <div class="buttons">
-          <button class="menu-icon">&#9776;</button>
           <div class="angebot">
             <button onClick="document.getElementById('kontakt-feld').scrollIntoView();">Kostenloses Angebot</button> 
           </div>
@@ -44,10 +56,12 @@
       </div>
       
       <div class="hero">
-        <video playsinline autoplay muted loop poster="cake.jpg">
+        <!--<video playsinline autoplay muted loop poster="cake.jpg">
           <source src="https://video.wixstatic.com/video/11062b_064474acb59e4067b9060d213dc7f6b7/1080p/mp4/file.mp4" type="video/webm">
           Ihr browser unterstützt den Video-Tag nicht.
-      </video>
+      </video>-->
+        <img src="https://static.wixstatic.com/media/d31ff127fc234a64a3f45b143b7605b1.jpg">
+        <!--<img src="background-hero.jpeg">-->
         <div class="content">
           <h1>Lass <strong class="brand">deine Rümpelhelden</strong> den Weg zu <strong>deinem Neuanfang</strong> frei machen</h1>
           <br>
@@ -163,7 +177,7 @@
             <img src="https://www.haushaltsaufloesung-muenchen.de/wp-content/uploads/2020/02/wohnungsaufl%C3%B6sung.jpg" alt="Entrümpelungen">
             <div class="text">
               <h2>Entrümpelung</h2>
-              <button>Mehr erfahren</button>
+              <button><a href="ser-entruempelung.html">Mehr erfahren</a></button>
             </div>
           </div>
           
@@ -171,7 +185,7 @@
             <img src="https://www.sanier.de/wp-content/uploads/images/entruempelung-wohnungsaufloesung-dorazett-adobestock.jpg" alt="Haushaltsauflösung">
             <div class="text">
               <h2>Haushaltsauflösung</h2>
-              <button>Mehr erfahren</button>
+              <button><a href="ser-haushalt.html">Mehr erfahren</a></button>
             </div>
           </div>
           
@@ -179,7 +193,7 @@
             <img src="https://static.wixstatic.com/media/ea26fd_91738f59b8cb40769316e5cd632c34d5~mv2_d_6720_4480_s_4_2.jpeg/v1/fill/w_703,h_395,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ea26fd_91738f59b8cb40769316e5cd632c34d5~mv2_d_6720_4480_s_4_2.jpeg" alt="Umzug">
             <div class="text">
               <h2>Umzug</h2>
-              <button>Mehr erfahren</button>
+              <button><a href="ser-umzug.html">Mehr erfahren</a></button>
             </div>
           </div>
           
@@ -187,7 +201,7 @@
             <img src="https://deutsche-schadenshilfe.de/wp-content/uploads/brandschadenbeseitigung-brandsanierung-beseitigen-reinigen-sanierung-nach-brand-240668947.jpg" alt="Brandschadenbeseitigung">
             <div class="text">
               <h2>Brandschadenbeseitigung</h2>
-              <button>Mehr erfahren</button>
+              <button><a href="ser-brandschaden.html">Mehr erfahren</a></button>
             </div>
           </div>
           
@@ -195,7 +209,7 @@
             <img src="https://media.istockphoto.com/id/1329184197/photo/small-cargo-truck-with-blank-container-for-mockup-space.jpg?s=612x612&w=0&k=20&c=E6p6YmowUEQdYvKd39Y8xPxNV9_Qq6SzmPOg2RiHFuk=" alt="Transport">
             <div class="text">
               <h2>Transport</h2>
-              <button>Mehr erfahren</button>
+              <button><a href="ser-transport.html">Mehr erfahren</a></button>
             </div>
           </div>
           
@@ -203,7 +217,7 @@
             <img src="https://www.goerlitz-insider.de/wp-content/uploads/2020/01/sperrmuell-in-goerlitz-2-678x381.jpg" alt="Entsorgung">
             <div class="text">
               <h2>Entsorgung</h2>
-              <button>Mehr erfahren</button>
+              <button><a href="ser-entsorgung.html">Mehr erfahren</a></button>
             </div>
           </div>
         </div>
@@ -364,7 +378,21 @@
         backdrop.style.display = 'none';
     }
     });
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
     //# sourceURL=pen.js
   </script>
 

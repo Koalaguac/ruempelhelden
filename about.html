@@ -14,12 +14,11 @@
   <link rel="icon" href="Held-removebg.png" type="image/icon type">
   <link rel="stylesheet" href="style.css">
   <style>
-  {EDITOR CSS}
   </style>
 
 </head>
 <body>
-  <div class="header">
+  <!-- <div class="header about-header">
     <a href="index.html">
       <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
     </a>
@@ -27,9 +26,9 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">Über uns</a></li>
       <li><a href="service.html">Unser Service</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <a>Kontakt</a>
-    </ul>
+      <!--<li><a href="faq.html">FAQ</a></li>-->
+      <!--<li><a>Kontakt</a></li>-->
+    <!--</ul>
     <div class="backdrop"></div>
     <nav class="mobile-nav-links"></nav>
     <div class="buttons">
@@ -38,7 +37,40 @@
         <button onClick="window.location.href = 'index.html#kontakt-feld';">Kostenloses Angebot</button> 
       </div>
     </div>
-  </div>
+  </div> -->
+  <div class="header index-header">
+    <div class="first">
+      <a href="index.html">
+        <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" style="color: var(--bgc)">Über uns</a></li>
+        <li>
+          <div class="dropdown">
+            <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service<span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
+            <div class="dropdown-space"></div>
+            <div class="dropdown-menu">
+              <a href="ser-entruempelung.html">Entrümpelung</a>
+              <a href="ser-haushalt.html">Haushaltsauflösung</a>
+              <a href="ser-umzug.html">Umzug</a>
+              <a href="ser-brandschaden.html">Brandschadenbeseitigung</a>
+              <a href="ser-transport.html">Transport</a><br>
+              <a href="ser-entsorgung.html">Entsorgung</a>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <nav class="mobile-nav-links"></nav>
+      <div class="backdrop"></div>
+      <button class="menu-icon">&#9776;</button>
+    </div>   
+      <div class="buttons">
+        <div class="angebot">
+          <button onClick="window.location.href = 'index.html#kontakt-feld';">Kostenloses Angebot</button> 
+        </div>
+      </div>
+    </div>
 
   <div class="about">
     <h1>Über Rümpelhelden</h1>
