@@ -1030,7 +1030,7 @@ button:hover{
     left: 0;
     bottom: 0;
     width: 200px;
-    background-color: var(--blue);
+    background-color: var(--bgc);
     padding: 31px 40px;
     z-index: 9999;
     max-width: 40vw;
@@ -1042,7 +1042,7 @@ button:hover{
   }
   
   .mobile-nav-links a {
-    color: var(--bgc);
+    color: black;
     text-decoration: none;
     margin-bottom: 10px;
   }
