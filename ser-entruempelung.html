@@ -31,7 +31,7 @@
             <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service<span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
             <div class="dropdown-space"></div>
             <div class="dropdown-menu">
-              <a href="ser-entruempelung.html" style="color: var(--bgc)">Entrümpelung</a>
+              <a href="ser-entruempelung.html">Entrümpelung</a>
               <a href="ser-haushalt.html">Haushaltsauflösung</a>
               <a href="ser-umzug.html">Umzug</a>
               <a href="ser-brandschaden.html">Brandschadenbeseitigung</a>
@@ -115,7 +115,7 @@
         mobileNavLinks.classList.remove('show');
         
     } else {
-        mobileNavLinks.innerHTML = '<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="50">';
+        mobileNavLinks.innerHTML = '<img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">';
         mobileNavLinks.innerHTML += navLinks.innerHTML;
         mobileNavLinks.classList.add('show');
         backdrop.style.display = 'block';
@@ -128,8 +128,22 @@
         backdrop.style.display = 'none';
     }
     });
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-  //# sourceURL=pen.js
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+    //# sourceURL=pen.js
   </script>
 
 </body>

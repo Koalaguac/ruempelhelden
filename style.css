@@ -20,7 +20,7 @@
   justify-content: space-between;
   font-size: 18px;
   align-items: center;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   padding-left: 2vw;
   z-index: 99;
 }
@@ -36,6 +36,8 @@
   color: black;
   cursor: pointer;
   text-shadow: .4px .4px black;
+  padding: 10px;
+  border-radius: 100px;
 }
 
 .header ul{
@@ -45,11 +47,9 @@
   gap: 25px;
 }
 
-.header li:hover,
-.header li:focus,
-.header li:active{
-  color: var(--bgc);
+.header a:hover{
   border-bottom: var(--bgc) solid 2px;
+  border-radius: 100px;
 }
 
 .header .angebot button{
@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 111px;
+  height: 125px;
 }
 
 .header .angebot button:hover{
@@ -73,6 +73,16 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 10px;
+}
+
+.header .dropdown a{
+  padding: 0px;
+}
+
+.header .dropdown a:hover{
+  padding-bottom: 5px;
+  border: none;
 }
 
 .dropdown-toggle {
@@ -81,34 +91,24 @@
 }
 
 .header .dropdown-menu {
-  border-radius: 5px;
+  border-radius: 20px;
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  line-height: 30px;
+  background-color: var(--bgc);
+  padding: 20px;
+  line-height: 50px;
 }
 
 .header .dropdown-menu a:hover{
-  color: black;
+  padding: 5px;
 }
-
-/*.dropdown:hover > .dropdown-space {
-  padding-bottom: 50px;
-  margin-top: 0;
-  padding-top: 0;
-  visibility: hidden;
-}*/
 
 .dropdown:hover .dropdown-menu{
   display: block;
 
 }
-
-
 .dropdown-caret {
   position: absolute;
   top: 50%;
@@ -142,6 +142,7 @@ button{
 
 button:hover{
   background-color: black;
+  color: white;
 }
 
 .menu-icon {
@@ -257,7 +258,7 @@ button:hover{
   flex-direction: column;
   padding: 5% 5vw 15%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
 
@@ -266,7 +267,7 @@ button:hover{
   max-width: 900px;
   font-weight: 600;
   font-size: 70px;
-  color: var(--bgc);
+  color: white;
   overflow-wrap: break-word;
 }
 
@@ -516,6 +517,11 @@ button:hover{
   padding: 1.5vw 2.5vw;
 }
 
+.dls button:hover{
+  color: white;
+  background-color: black;
+}
+
 .dls button a{
   text-decoration: none;
   all: unset;
@@ -603,7 +609,7 @@ button:hover{
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   
   .warum-wir .container .content h1{
     max-width: 50vw;
@@ -727,7 +733,7 @@ button:hover{
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   /*.ablauf .box p{
     margin-bottom: 0;
   }
@@ -798,7 +804,14 @@ button:hover{
 
 #kontakt-feld .form button{
   border-radius: 0;
+  background-color: white;
 }
+
+#kontakt-feld .form button:hover{
+  background-color: black;
+  color: white;
+}
+
 
 .star{
   color: red;
@@ -813,7 +826,7 @@ button:hover{
 .about h1{
   background-color: var(--bgc);
   color: black;
-  height: 60vh;
+  height: 40vw;
   width: 50vw;
   max-width: 50vw; 
   font-size: 6vw;
@@ -826,7 +839,7 @@ button:hover{
   color: black;
   width: 50vw;
   max-width: 50vw;
-  height: 60vh;
+  height: 40vw;
   padding: 7vw;
 }
 
@@ -843,7 +856,7 @@ button:hover{
 @media screen and (max-width: 1400px) {
   .about{
     flex-direction: column;
-    background-color: var(--yellow);
+    background-color: var(--bgc);
   }
 
   .about h1,
@@ -889,7 +902,7 @@ button:hover{
 .ser-hero h1{
   background-color: var(--bgc);
   color: black;
-  height: 60vh;
+  height: 25vw;
   width: 50vw;
   max-width: 50vw; 
   font-size: 6vw;
@@ -902,14 +915,25 @@ button:hover{
   color: black;
   width: 50vw;
   max-width: 50vw;
-  height: 60vh;
+  height: 25vw;
   padding: 7vw;
+}
+
+.erplg h1{
+  font-size: 5vw;
+}
+
+.hh h1{
+  font-size: 4vw;
+}
+.bsd h1{
+  font-size: 3vw;
 }
 
 @media screen and (max-width: 1400px) {
   .ser-hero{
     flex-direction: column;
-    background-color: var(--yellow);
+    background-color: var(--bgc);
   }
 
   .ser-hero h1,
@@ -932,6 +956,13 @@ button:hover{
     width: auto; 
     font-size: 3vw;
   }
+  
+  .hh h1{
+    font-size: 7vw;
+  }
+  .bsd h1{
+    font-size: 5vw;
+  }
 
 }
 @media screen and (max-width: 465px) {
@@ -942,7 +973,6 @@ button:hover{
   .ser-hero p{
     font-size: 5vw;
   }
-
 }
 
 
@@ -991,7 +1021,7 @@ button:hover{
   
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .header{
     flex-direction: column-reverse;
     padding: 0;
@@ -1079,4 +1109,9 @@ button:hover{
   .about{
     margin-top: 140px;
   }
+
+  .ser-hero{
+    margin-top: 140px;
+  }
+
 }
