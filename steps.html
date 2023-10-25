@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="robots" content="noindex">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meine Rümpelhelden</title>
+
+  <link rel="icon" href="Held-removebg.png" type="image/icon type">
+  <link rel="stylesheet" href="steps.css">
+  <style>
+
+  </style>
+
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">
+      <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="service.html">Unser Service</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <a>Kontakt</a>
+    </ul>
+    <div class="backdrop"></div>
+    <nav class="mobile-nav-links"></nav>
+    <div class="buttons">
+      <button class="menu-icon">&#9776;</button>
+      <div class="angebot">
+        <button onClick="window.location.href = 'index.html#kontakt-feld';">Kostenloses Angebot</button> 
+      </div>
+    </div>
+  </div>
+  
+
+<form class="form" method="post">
+<!--Add two buttons to each step, one "zurück" and the other "weiter"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+  <div class="step" id="step-1" style="display: block;">
+    <div class="postleitzahl group" required>
+      <Label>Wie lautet die Postleitzahl des Auftrags? <span class="star">*<span></Label>
+      <input type="text" id="plz" class="inputfield" placeholder="z. B. 28195" maxlength="5"><!--pattern="^[0-9]{5}$">-->
+      <p class="validation-message">Postleitzahl benötigt.</p>
+      <p class="plz-validation-message">Bitte halten Sie das vorgegebene Format ein.</p>
+    </div>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+
+
+  <div class="step" id="step-2">
+    <div class="ausräumen check group" required>
+      <div class="pace">
+        <label>Was müssen sie ausräumen? <span class="star">*<span></label><br>
+        <div class="checkboxes">
+          <label for="haus" class="box">
+            <div class="checkbox"><input type="checkbox" id="haus" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Haus<br><br></span>
+          </label>
+
+          <label for="wohnung" class="box">
+            <div class="checkbox"><input type="checkbox" id="wohnung" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Wohnung<br><br></span>
+          </label>
+          
+          <label for="keller" class="box">
+            <div class="checkbox"><input type="checkbox" id="keller" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Keller oder Garage</span>
+          </label>
+
+          <label for="dachgeschoss" class="box">
+            <div class="checkbox"><input type="checkbox" id="dachgeschoss" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Dachgeschoss<br><br></span>
+          </label>
+
+          <label for="möbel" class="box">
+            <div class="checkbox"><input type="checkbox" id="möbel" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Möbel<br><br></span>
+          </label>
+
+          <label for="haushaltsgeräte" class="box">
+            <div class="checkbox"><input type="checkbox" id="haushaltsgeräte" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Haushaltsgeräte<br><br></span>
+          </label>
+
+          <label for="kleine_gegenstände" class="box">
+            <div class="checkbox"><input type="checkbox" id="kleine_gegenstände" class="checkbox"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Kleine Gegenstände</span>
+          </label>
+
+          <label for="ausräumen_sonstiges" class="box">
+            <div class="checkbox"><input type="checkbox" id="ausräumen_sonstiges" class="checkbox sonstiges" onchange="toggleTextField()"></div>
+            <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+            <span>Sonstiges</span>
+          </label>
+          <input type="text" id="ausräumen_textfield" class="textfield" name="textfield" style="display: none;" placeholder="Bitte Angeben">
+          <p class="validation-message">Bitte beantworten sie diese Frage.</p>
+        </div>
+      </div>
+    </div>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+    
+
+  <div class="step" id="step-3">
+    <div class="optional">
+      <Label>Wie groß ist der Bereich in quadratmeter? (optional)</Label><input class="inputfield" type="number" placeholder="z. B. 10 quadratmeter" pattern="[0-9]{5}"/><br><br><br><br>
+    </div>
+    <div class="entfernen check group" required>
+      <label>Wo befinden sich die zu entfernenden Gegenstände?  <span class="star">*<span></label><br>
+      <div class="checkboxes">
+
+        <label for="untergeschoss" class="box">
+          <div class="checkbox"><input type="checkbox" id="untergeschoss" class="checkbox"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Untergeschoss<br><br></span>
+        </label>
+
+        <label for="erdgeschoss" class="box">
+          <div class="checkbox"><input type="checkbox" id="erdgeschoss" class="checkbox"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Erdgeschoss<br><br></span>
+        </label>
+        
+        <label for="erste" class="box">
+          <div class="checkbox"><input type="checkbox" id="erste" class="checkbox"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Erste Etage<br><br></span>
+        </label>
+
+        <label for="zweite" class="box">
+          <div class="checkbox"><input type="checkbox" id="zweite" class="checkbox"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Zweite Etage oder höher</span>
+        </label>
+
+        <label for="ort_keller" class="box">
+          <div class="checkbox"><input type="checkbox" id="ort_keller" class="checkbox"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Keller oder Garage</span>
+        </label>
+
+        <label for="freien" class="box">
+          <div class="checkbox"><input type="checkbox" id="freien" class="checkbox"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Im Freien<br><br></span>
+        </label>
+
+        <label for="ort_sonstiges" class="box">
+          <div class="checkbox"><input type="checkbox" id="ort_sonstiges" class="checkbox sonstiges" onchange="toggleTextField()"></div>
+          <img src="https://www.my-hammer.de/svg-icons/standaloneHouse.svg" width="48">
+          <span>Sonstiges<br><br></span>
+        </label>
+        <input type="text" id="ort_textfield" class="textfield" name="textfield" style="display: none;" placeholder="Bitte Angeben">
+        <br>
+        <p class="validation-message">Bitte beantworten sie diese Frage.</p>
+      </div>
+    </div>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+
+  <div class="step" id="step-4">
+    <div class="group">
+      <label for="sondermüll">Muss auch Sondermüll entsorgt werden? <span class="star">*<span></label>
+      <ul id="sondermüll" class="options group" name="sondermüll" required>
+        <li><label class="options_box" for="sondermüll_nicht_sicher">
+          <span>Ich bin mir nicht Sicher</span>
+          <input type="checkbox" id="sondermüll_nicht_sicher" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="sondermüll_nein">
+          <span>Nein</span>
+          <input type="checkbox" id="sondermüll_nein" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="sondermüll_ja">
+          <span>Ja</span>
+          <input type="checkbox" id="sondermüll_ja" class="options_checkbox sonstiges" name="check" onchange="toggleTextField()" onclick="onlyOne(this)">
+        </label></li>
+        <input type="text" id="sondermüll_textfield" class="textfield" name="textfield" style="display: none;" placeholder="Bitte Angeben">
+        <p class="validation-message">Bitte beantworten sie diese Frage.</p>
+      </ul><br>
+    </div>
+    
+    <div class="group">
+      <label for="aufzug">Gibt es einen Aufzug im Gebäude? <span class="star">*<span></label>
+      <ul id="aufzug" class="options group" name="aufzug" required>
+
+        <li><label class="options_box" for="aufzug_nein">
+          <span>Nein</span>
+          <input type="checkbox" id="aufzug_nein" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="aufzug_ja">
+            <span>Ja</span>
+            <input type="checkbox" id="aufzug_ja" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+        <p class="validation-message">Bitte beantworten sie diese Frage.</p>
+      </ul><br>
+    </div>
+    
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+  
+  <div class="step" id="step-5">
+    <label for="container">Wird ein Container benötigt? <span class="star">*<span></label>
+    <ul id="container" class="options group" name="container" required>
+        <li><label class="options_box" for="ja_wir">
+          <span>Ja, ich möchte, das ihr das für mich arrangiert</span>
+          <input type="checkbox" id="ja_wir" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="ja_selber">
+          <span>Ja, ich werde das selber organisieren</span>
+          <input type="checkbox" id="ja_selber" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="container_nein">
+          <span>Nein, ich brauche keinen Container</span>
+          <input type="checkbox" id="container_nein" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="rücksprache">
+          <span>Nach Rücksprache</span>
+          <input type="checkbox" id="rücksprache" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+        <p class="validation-message">Bitte beantworten sie diese Frage.</p>
+    </ul><br>
+      
+      
+    <label for="platz">Gibt es genügend Platz, um einen Lkw oder Container außerhalb des Gebäudes zu parken? <span class="star">*<span></label>
+    <ul id="platz" class="options group" name="platz" required>
+        <li><label class="options_box" for="platz_ja">
+          <span>Ja</span>
+          <input type="checkbox" id="platz_ja" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+        <li><label class="options_box" for="platz_nein">
+          <span>Nein</span>
+          <input type="checkbox" id="platz_nein" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+        <p class="validation-message">Bitte beantworten sie diese Frage.</p>
+    </ul><br>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+  
+  <div class="step" id="step-6">
+    <div class="optional">
+      <label for="wann">Wann soll die Arbeit erledigt werden? (optional)</label>
+      <ul id="wann" class="options" name="wann">
+        <li><label class="options_box" for="dringend">
+          <span>Dringend</span>
+          <input type="checkbox" id="dringend" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="2_wochen">
+          <span>Innerhalb von 2 Wochen</span>
+          <input type="checkbox" id="2_wochen" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="1_monat">
+          <span>Innerhalb von 1 Monat</span>
+          <input type="checkbox" id="1_monat" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="monate">
+          <span>Innerhalb weniger Monate</span>
+          <input type="checkbox" id="monate" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+        
+      </ul><br>
+    </div>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+
+  <div class="step" id="step-7">
+    <div class="optional">
+      <label for="fotos">Fotos oder Grundriss? (optional)</label>
+      <ul id="fotos" class="options" name="fotos">
+        <li><label class="options_box" for="fotos_nein">
+          <span>Nein</span>
+          <input type="checkbox" id="fotos_nein" class="options_checkbox" name="check" onclick="onlyOne(this)">
+        </label></li>
+
+        <li><label class="options_box" for="fotos_ja">
+          <span>Ja</span>
+          <input type="checkbox" id="fotos_ja" class="options_checkbox" name="check" onchange="toggleFotoField(this)" onclick="onlyOne(this)">
+        </label><label for="fotos_hochladen" id="custom_fotos_hochladen" style="display: none;">
+          <img src="https://www.my-hammer.de/svg-icons/upload.large.svg" width="60px">Wählen Sie Ihre Dateien aus oder nehmen Sie mit Ihrer Kamera ein Foto auf.
+          <input type="file" id="fotos_hochladen" name="fotos_hochladen" multiple style="display:none">
+        </label><br><br>
+
+        </li>
+        
+      </ul><br>
+    </div>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+
+  <div class="step" id="step-8">
+    <div class="weitere_angaben optional">
+      <label>Weitere Angaben (optional)<br></label>
+      <textarea type="text" cols="40" rows="10" placeholder="Denken Sie an Planung, Maße, Zugänglichkeit der Immobilie und andere wichtige Informationen" class="input-nachricht" name="message"></textarea><br><br><br>
+    </div>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="button" onclick="goNext(this)">Weiter</button>
+  </div>
+
+  <div class="step" id="step-9">
+    <div class="email group" required> 
+      <label>Hinterlassen Sie hier Ihre E-Mail damit wir Sie kontaktieren können<span class="star">*</span></label>
+      <input type="email" placeholder="E-Mail" class="inputfield" name="email" ><br><br><br>
+      <p class="validation-message">Dieses Feld ist ein Pflichfeld.</p>
+    </div>
+    <button class="zurück" type="button" onclick="goBack(this)">Zurück</button>
+    <button type="submit" onclick="goNext(this)">Absenden</button> 
+  </div>
+
+</form>
+
+  <div class="footer">
+    <div class=footer-logo>
+      <!--<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="150" alt="HB">-->
+      <!--<h4>HB Entrümpelungen</h4>
+      Mehr Platz für ein besseres Leben!-->
+      <img src="Entrümpelhelden-removebg.png" width="250" alt="HB">
+      <br>© 2023 Meine Rümpelhelden
+    </div>
+      <div class="footer-kontakt">
+         <p class="heading">KONTAKT</p>
+         <br>
+         <p>Wasserstraße 153<br>
+         28325 Bremen</p>
+         <br>
+         <p>Telefon: <a href="">1234 567890</a>
+         <br>Email: <a href="mailto: info@hb-entruempelungen.de">info@hb-entruempelungen.de</a></p>
+      </div>
+      <div class="footer-stunden">
+        <p class="heading">ARBEITSSTUNDEN</p>
+        <br>
+        <p>Mo - Fr: 8:00 - 20:00
+        <br>Samstag: 9:00 - 19:00 
+        <br>Sonntag: 9:00 - 20:00</p>
+        
+      </div>
+      <div class="footer-weiteres">
+        <p class="heading">WEITERES</p>
+        <br>
+        <a href="">Über uns</a>
+        <a href="">Unser Service</a>
+        <a href="">Impressum</a>
+        <a href="">FAQ</a>
+        <a href="">Datenschutzerklärung</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // const menuIcon = document.querySelector('.menu-icon');
+    // const mobileNavLinks = document.querySelector('.mobile-nav-links');
+    // const navLinks = document.querySelector('.header ul');
+    // const backdrop = document.querySelector('.backdrop');
+
+    // menuIcon.addEventListener('click', () => {
+    // if (mobileNavLinks.classList.contains('show')) {
+    //     mobileNavLinks.innerHTML = '';
+    //     mobileNavLinks.classList.remove('show');
+        
+    // } else {
+    //     mobileNavLinks.innerHTML = '<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="50">';
+    //     mobileNavLinks.innerHTML += navLinks.innerHTML;
+    //     mobileNavLinks.classList.add('show');
+    //     backdrop.style.display = 'block';
+    // }
+    // });
+
+    // backdrop.addEventListener('click', (event) => {
+    // if (event.target === backdrop) { // Check if the backdrop itself was clicked
+    //     mobileNavLinks.classList.remove('show');
+    //     backdrop.style.display = 'none';
+    // }
+    // });
+
+    function toggleTextField() {
+      var checkbox = document.getElementsByClassName("sonstiges");
+      var textField = document.getElementsByClassName("textfield");
+      for(var i=0; i<checkbox.length; i++) { 
+        if(checkbox[i].checked){
+          textField[i].required = true; // Das Textfeld ist erforderlich
+          textField[i].style.display = "block";
+          textField[i].focus();
+        }
+        else {
+          textField[i].style.display = "none";
+          textField[i].required = false; // Das Textfeld ist nicht mehr erforderlich
+        }
+      }
+    }
+
+    function toggleFotoField() {
+      var checkbox = document.getElementById("fotos_ja");
+      var textField = document.getElementById("custom_fotos_hochladen");
+      //for(var i=0; i<checkbox.length; i++) { 
+      if(checkbox.checked){
+        textField.style.display = "flex";
+        textField.focus();
+      }
+      else {
+        textField.style.display = "none";
+        textField.required = false; // Das Textfeld ist nicht mehr erforderlich
+      }
+      //}
+    }
+
+    function onlyOne(checkbox) {
+      var checkboxes = document.getElementsByClassName('options_checkbox')
+
+      // var checkboxes = document.getElementsByName("check")
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes.item(i) !== checkbox && checkbox.parentNode.parentNode.parentNode.id == checkboxes.item(i).parentNode.parentNode.parentNode.id) checkboxes.item(i).checked = false
+      }
+      // checkboxes.forEach((item) => {
+      //   if (item !== checkbox) item.checked = false
+      // })
+      toggleTextField()
+      toggleFotoField()
+    }
+  
+    // Make all steps display:none
+    // Only on at a time display:show
+
+    function goBack(step) {
+      var currentStep = step.parentNode
+      var currentStepId = step.parentNode.id
+      var currentStepNumber = String(currentStepId)[currentStepId.length - 1]
+      var nextStepId = String("step-"+(Number(currentStepNumber)-1) )
+      var nextStep = document.getElementById(nextStepId)
+      globalThis.validEmail = false;
+      currentStep.style.display = "none"
+      nextStep.style.display = "block"
+
+    }
+
+    // Fix that only if input pattern correct goNext, now even if pattern wrong it goNext. e.g : input for postleitzahl pattern supposed to be only numbers and 5 characters long
+    // MMM   MMM EEEEEEEEE RRRRRRRR  TTTTTTTTT
+    // M  M M  M E         R       R     T
+    // M   M   M EEEEEE    RRRRRRRR      T
+    // M       M E         R  RR         T
+    // M       M EEEEEEEEE R     RR      T
+
+    function goNext(step) {
+      var currentStep = step.parentNode
+      var currentStepId = step.parentNode.id
+      var currentStepNumber = String(currentStepId)[currentStepId.length - 1]
+      var nextStepId = String("step-"+(Number(currentStepNumber)+1) )
+      var nextStep = document.getElementById(nextStepId)
+      var boolValidation = []
+      //var childGroup = currentStep.children
+      var childGroup = currentStep.querySelectorAll('.group[required]');
+      var validationGroup = currentStep.querySelectorAll(".validation-message,.plz-validation-message")
+
+      if (currentStepId == "step-1" && childGroup[0].querySelectorAll('input[type="text"]')[0].value.length !== 5 && childGroup[0].querySelectorAll('input[type="text"]')[0].value.length){
+      childGroup[0].querySelector('.plz-validation-message').style.display = "block"
+      }else if (currentStepId == "step-1"){
+      childGroup[0].querySelector('.plz-validation-message').style.display = "none"
+      }
+
+      if (childGroup.length == 0 || currentStepId !== "step-9"){
+        currentStep.style.display = "none"
+        nextStep.style.display = "block"
+      }else{
+        for (var j = 0; j < childGroup.length; j++) {
+          var checkboxes = childGroup[j].querySelectorAll('input[type="checkbox"]');
+          var textfield = childGroup[j].querySelectorAll('input[type="text"]');
+          var emailfield = childGroup[j].querySelectorAll('input[type="email"]');
+          var isValid = false;
+          var next = false;
+          var send = false;
+          
+          if (emailfield.length != 0){
+            //send = true;
+            //nextStep = document.getElementById("step-1")
+          }
+
+          if (childGroup[j].className.includes("optional")){
+            continue;
+          }
+
+          for (var l = 0; l < textfield.length; l++) {
+            if (textfield[l].value.trim() === '' && textfield[l].style.display !== "none") {
+              childGroup[j].querySelector('.validation-message').style.display = 'block'; 
+              next = false;
+            }else {
+              childGroup[j].querySelector('.validation-message').style.display = 'none';
+              next = true;
+            }
+          }
+
+          // for (var l = 0; l < emailfield.length; l++) {
+          //   if (emailfield[l].value.trim() === '') {
+          //     childGroup[j].querySelector('.validation-message').style.display = 'block';
+          //     next = false;
+          //   }else {
+          //     childGroup[j].querySelector('.validation-message').style.display = 'none';
+          //     next = true;
+          //   }
+          // }
+
+          for (var k = 0; k < checkboxes.length; k++) {
+            if (checkboxes[k].checked) {
+              isValid = true;
+              break;
+            }
+            else{
+              isValid = false;
+            }
+          } 
+          if (checkboxes.length > 0){
+            if (!isValid) { //&& textfield.length === 0 && emailfield.length === 0) {
+              try{
+                childGroup[j].querySelector('.validation-message').style.display = 'block';
+                next = false;
+              }
+              catch{
+              }
+            } else {
+              childGroup[j].querySelector('.validation-message').style.display = 'none';
+              next = true;
+            }
+          }
+
+          // array of bool whether validation-message is shown ( true or false)
+          
+          for (var b = 0; b < validationGroup.length; b++) {
+            boolValidation.push(validationGroup[b].style.display)
+          }
+        }
+
+        if (next == true && boolValidation.includes("block") == false){
+          if (send != true){
+            currentStep.style.display = "none"
+            nextStep.style.display = "block"
+            var boolValidation = []
+          }else{
+            window.location.href = 'https://www.disneyplus.com/home';
+          }
+        }
+      }
+    }
+    
+    var checkboxes = document.querySelectorAll("input");
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('input', function() {
+        enabledSettings = 
+          Array.from(checkboxes) // Convert checkboxes to an array to use filter and map.  
+          .filter(i => i.checked) // Use Array.filter to remove unchecked checkboxes.
+          .map(i => i.value) // Use Array.map to extract only the checkbox values from the array of objects.
+        try{
+          if (checkbox.type == "text" || enabledSettings.includes("on") && checkbox.parentNode.parentNode.parentNode.querySelector('.validation-message').style.display == "block" || checkbox.parentNode.parentNode.parentNode.querySelector('.plz-validation-message').style.display == "block"){ //if checkbox is checked and validation-message is shown
+            checkbox.parentNode.parentNode.parentNode.querySelector('.validation-message').style.display = "none"; //hide validation-message
+            if (checkbox.parentNode.querySelectorAll('input[type="text"]')[0].value.length == 5){
+              checkbox.parentNode.parentNode.parentNode.querySelector('.plz-validation-message').style.display = "none";
+            }
+          }else if(checkbox.type == "email" && !(checkbox.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))){
+            globalThis.validEmail = true
+          }else{
+            globalThis.validEmail = false
+          }
+        }catch{}
+      })
+    });
+
+    document.addEventListener("submit", function(event){
+      event.preventDefault();
+      console.log(document.getElementById("step-9"))
+      var step = document.getElementById("step-9")
+      if(globalThis.validEmail){
+        console.log("water")
+        console.log(step.querySelector('.validation-message').style.display);
+        step.querySelector('.validation-message').style.display = "block";
+      }else{
+        step.querySelector('.validation-message').style.display = "none";
+      }
+        
+    });
+
+    document.addEventListener('invalid', (function () {
+      return function (e) {
+        console.log("waterss")
+        e.preventDefault();
+        document.getElementById("step-9").focus();
+      };
+    })(), true);
+
+  </script>
+
+</body>
+
+</html>

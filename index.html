@@ -27,19 +27,19 @@
           <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
         </a>
         <ul class="nav-links">
-          <li><a href="index.html" style="border: none; background-color: var(--bgc)">Home</a></li>
+          <li><a href="index.html" style="border: none; background-color: var(--bgc); color: var(--links)">Home</a></li>
           <li><a href="about.html">Über uns</a></li>
           <li>
             <div class="dropdown">
-              <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service<span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
+              <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service <span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
               <div class="dropdown-space"></div>
               <div class="dropdown-menu">
                 <a href="ser-entruempelung.html">Entrümpelung</a>
                 <a href="ser-haushalt.html">Haushaltsauflösung</a>
-                <a href="ser-umzug.html">Umzug</a>
+                <!-- <a href="ser-umzug.html">Umzug</a>
                 <a href="ser-brandschaden.html">Brandschadenbeseitigung</a>
                 <a href="ser-transport.html">Transport</a><br>
-                <a href="ser-entsorgung.html">Entsorgung</a>
+                <a href="ser-entsorgung.html">Entsorgung</a> -->
               </div>
             </div>
           </li> 
@@ -63,7 +63,7 @@
         <img src="https://static.wixstatic.com/media/d31ff127fc234a64a3f45b143b7605b1.jpg">
         <!--<img src="background-hero.jpeg">-->
         <div class="content">
-          <h1>Lass <strong class="brand">deine Rümpelhelden</strong> den Weg zu <strong>deinem Neuanfang</strong> frei machen</h1>
+          <h1><strong>Rümpel</strong> nicht alleine - Ruf deine <strong>Helden</strong> !</h1>
           <br>
           <br>
           <div class="kontakt">
@@ -189,7 +189,7 @@
             </div>
           </div>
           
-          <div class="umzug box">
+          <!-- <div class="umzug box">
             <img src="https://static.wixstatic.com/media/ea26fd_91738f59b8cb40769316e5cd632c34d5~mv2_d_6720_4480_s_4_2.jpeg/v1/fill/w_703,h_395,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ea26fd_91738f59b8cb40769316e5cd632c34d5~mv2_d_6720_4480_s_4_2.jpeg" alt="Umzug">
             <div class="text">
               <h2>Umzug</h2>
@@ -218,8 +218,8 @@
             <div class="text">
               <h2>Entsorgung</h2>
               <button><a href="ser-entsorgung.html">Mehr erfahren</a></button>
-            </div>
-          </div>
+            </div> 
+          </div>-->
         </div>
       </div>
 
@@ -283,7 +283,7 @@
         <h1>Kontaktformular</h1>
         <p>Beschreiben sie hier ihr Anliegen. Wir werden schnellstmöglich antworten.</p>
         
-        <form class="form">
+        <form class="form" action="submit-form.php" method="post">
           <div class="kunde-name">
             <label>Ihr Name <span class="star">*</span><br>
               <input type="text" placeholder="Name" class="input-name" name="name" required>
@@ -291,23 +291,23 @@
           </div>
           <div class="kunde-mail">
             <label>Ihre E-Mail <span class="star">*</span><br>
-              <input type="email" placeholder="E-Mail" class="input-mail" name="name" required>
+              <input type="email" placeholder="E-Mail" class="input-mail" name="email" required>
             </label>
           </div>
           <div class="kunde-telefon">
             <label>Ihre Telefonnummer<br>
-              <input type="tel" placeholder="Telefonnummer" class="input-tel" name="name">
+              <input type="tel" placeholder="Telefonnummer" class="input-tel" name="phone">
             </label>
           </div>
           <div class="kunde-nachricht">
             <label>Ihre Nachricht <span class="star">*</span><br>
-              <textarea type="text" cols="70" rows="10" placeholder="Nachricht" class="input-nachricht" name="name" required></textarea>
+              <textarea type="text" cols="70" rows="10" placeholder="Nachricht" class="input-nachricht" name="message" required></textarea>
             </label>
           </div>
           <button type="submit">Absenden</button>
         </form>
       </div>
-      
+
       <!--Oder Slogan entfernen und nur logo aber größer-->
       
       <div class="footer">
@@ -341,7 +341,7 @@
             <a href="about.html">Über uns</a>
             <a href="service.html">Unser Service</a>
             <a href="">Impressum</a>
-            <a href="faq.html">FAQ</a>
+            <!--<a href="faq.html">FAQ</a>-->
             <a href="">Datenschutzerklärung</a>
           </div>
         </div>
