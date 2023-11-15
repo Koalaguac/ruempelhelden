@@ -16,29 +16,21 @@
   <style>
 
   </style>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+    $(function(){
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+    });
+</script> 
 
 </head>
 <body>
-  <div class="header">
-    <a href="index.html">
-      <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Über uns</a></li>
-      <li><a href="service.html">Unser Service</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <a>Kontakt</a>
-    </ul>
-    <div class="backdrop"></div>
-    <nav class="mobile-nav-links"></nav>
-    <div class="buttons">
-      <button class="menu-icon">&#9776;</button>
-      <div class="angebot">
-        <button onClick="window.location.href = 'index.html#kontakt-feld';">Kostenloses Angebot</button> 
-      </div>
-    </div>
-  </div>
+  <div id="header"></div>
   
 
 <form class="form" method="post">
@@ -339,42 +331,7 @@
 
 </form>
 
-  <div class="footer">
-    <div class=footer-logo>
-      <!--<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="150" alt="HB">-->
-      <!--<h4>HB Entrümpelungen</h4>
-      Mehr Platz für ein besseres Leben!-->
-      <img src="Entrümpelhelden-removebg.png" width="250" alt="HB">
-      <br>© 2023 Meine Rümpelhelden
-    </div>
-      <div class="footer-kontakt">
-         <p class="heading">KONTAKT</p>
-         <br>
-         <p>Wasserstraße 153<br>
-         28325 Bremen</p>
-         <br>
-         <p>Telefon: <a href="">1234 567890</a>
-         <br>Email: <a href="mailto: info@hb-entruempelungen.de">info@hb-entruempelungen.de</a></p>
-      </div>
-      <div class="footer-stunden">
-        <p class="heading">ARBEITSSTUNDEN</p>
-        <br>
-        <p>Mo - Fr: 8:00 - 20:00
-        <br>Samstag: 9:00 - 19:00 
-        <br>Sonntag: 9:00 - 20:00</p>
-        
-      </div>
-      <div class="footer-weiteres">
-        <p class="heading">WEITERES</p>
-        <br>
-        <a href="">Über uns</a>
-        <a href="">Unser Service</a>
-        <a href="">Impressum</a>
-        <a href="">FAQ</a>
-        <a href="">Datenschutzerklärung</a>
-      </div>
-    </div>
-  </div>
+<div id="footer"></div>
 
 
   <script>

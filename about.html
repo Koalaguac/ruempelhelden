@@ -15,6 +15,18 @@
   <link rel="stylesheet" href="style.css">
   <style>
   </style>
+  <script src="https://kit.fontawesome.com/4bf7013d25.js" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+    $(function(){
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+    });
+  </script> 
 
 </head>
 <body>
@@ -38,40 +50,8 @@
       </div>
     </div>
   </div> -->
-  <div class="header index-header">
-    <div class="first">
-      <a href="index.html">
-        <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" style="border: none; background-color: var(--bgc); color: var(--links)">Über uns</a></li>
-        <li>
-          <div class="dropdown">
-            <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service<span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
-            <div class="dropdown-space"></div>
-            <div class="dropdown-menu">
-              <a href="ser-entruempelung.html">Entrümpelung</a>
-              <a href="ser-haushalt.html">Haushaltsauflösung</a>
-              <!-- <a href="ser-umzug.html">Umzug</a>
-              <a href="ser-brandschaden.html">Brandschadenbeseitigung</a>
-              <a href="ser-transport.html">Transport</a><br>
-              <a href="ser-entsorgung.html">Entsorgung</a> -->
-            </div>
-          </div>
-        </li> 
-      </ul>
-      <nav class="mobile-nav-links"></nav>
-      <div class="backdrop"></div>
-      <button class="menu-icon">&#9776;</button>
-    </div>   
-      <div class="buttons">
-        <div class="angebot">
-          <button onClick="window.location.href = 'index.html#kontakt-feld';">Kostenloses Angebot</button> 
-        </div>
-      </div>
-    </div>
-
+  <div id="header"></div>
+    
   <div class="about">
     <h1>Über Rümpelhelden</h1>
     <p>Rümpelhelden ist ein Entrümpelungsunternehmen mit Sitz in Bremen, das sich auf Entrümpelungen und Haushaltsauflösungen spezialisiert,
@@ -82,91 +62,13 @@
       Überlassen Sie uns die harte Arbeit, damit Sie sich auf den nächsten Abschnitt Ihres Lebens konzentrieren können.</p>
   </div>
   
-  <div class="footer">
-    <div class=footer-logo>
-      <!--<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="150" alt="HB">-->
-      <!--<h4>HB Entrümpelungen</h4>
-      Mehr Platz für ein besseres Leben!-->
-      <img src="Entrümpelhelden-removebg.png" width="250" alt="HB">
-      <br>© 2023 Meine Rümpelhelden
-    </div>
-      <div class="footer-kontakt">
-         <p class="heading">KONTAKT</p>
-         <br>
-         <p>Wasserstraße 153<br>
-         28325 Bremen</p>
-         <br>
-         <p>Telefon: <a href="">1234 567890</a>
-         <br>Email: <a href="mailto: info@hb-entruempelungen.de">info@hb-entruempelungen.de</a></p>
-      </div>
-      <div class="footer-stunden">
-        <p class="heading">ARBEITSSTUNDEN</p>
-        <br>
-        <p>Mo - Fr: 8:00 - 20:00
-        <br>Samstag: 9:00 - 19:00 
-        <br>Sonntag: 9:00 - 20:00</p>
-        
-      </div>
-      <div class="footer-weiteres">
-        <p class="heading">WEITERES</p>
-        <br>
-        <a href="">Über uns</a>
-        <a href="">Unser Service</a>
-        <a href="">Impressum</a>
-        <a href="">FAQ</a>
-        <a href="">Datenschutzerklärung</a>
-      </div>
-    </div>
-  </div>
+  <div id="footer"></div>
   
   <!--
   <div class="footer-2">
     Copyright © HB Entrümpelungen | <a href="">Impressum</a> | <a href="">Datenschutzerklärung</a>
   </div>
   -->
-
-  <script>
-    const menuIcon = document.querySelector('.menu-icon');
-    const mobileNavLinks = document.querySelector('.mobile-nav-links');
-    const navLinks = document.querySelector('.header ul');
-    const backdrop = document.querySelector('.backdrop');
-
-    menuIcon.addEventListener('click', () => {
-    if (mobileNavLinks.classList.contains('show')) {
-        mobileNavLinks.innerHTML = '';
-        mobileNavLinks.classList.remove('show');
-        
-    } else {
-        mobileNavLinks.innerHTML = '<img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">';
-        mobileNavLinks.innerHTML += navLinks.innerHTML;
-        mobileNavLinks.classList.add('show');
-        backdrop.style.display = 'block';
-    }
-    });
-
-    backdrop.addEventListener('click', (event) => {
-    if (event.target === backdrop) { // Check if the backdrop itself was clicked
-        mobileNavLinks.classList.remove('show');
-        backdrop.style.display = 'none';
-    }
-    });
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-      var myDropdown = document.getElementById("myDropdown");
-        if (myDropdown.classList.contains('show')) {
-          myDropdown.classList.remove('show');
-        }
-      }
-    }
-    //# sourceURL=pen.js
-  </script>
 
 </body>
 

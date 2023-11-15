@@ -9,67 +9,38 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rümpelhelden</title>
+  <title>Engel-Entrümpelung</title>
 
   <link rel="icon" href="Held-removebg.png" type="image/icon type">
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/4bf7013d25.js" crossorigin="anonymous"></script>
   <style>
   </style>
-
+  <script src="https://kit.fontawesome.com/4bf7013d25.js" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+    $(function(){
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+    });
+  </script> 
 </head>
 
 <body>
-
-    <div class="header index-header">
-      <div class="first">
-        <a href="index.html">
-          <img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">
-        </a>
-        <ul class="nav-links">
-          <li><a href="index.html" style="border: none; background-color: var(--bgc); color: var(--links)">Home</a></li>
-          <li><a href="about.html">Über uns</a></li>
-          <li>
-            <div class="dropdown">
-              <div class="dropdown-text"><a href="service.html" class="dropdown-toggle">Unser Service <span href="#" class="dropdown-toggle dropdown-caret"></span></a></div>
-              <div class="dropdown-space"></div>
-              <div class="dropdown-menu">
-                <a href="ser-entruempelung.html">Entrümpelung</a>
-                <a href="ser-haushalt.html">Haushaltsauflösung</a>
-                <!-- <a href="ser-umzug.html">Umzug</a>
-                <a href="ser-brandschaden.html">Brandschadenbeseitigung</a>
-                <a href="ser-transport.html">Transport</a><br>
-                <a href="ser-entsorgung.html">Entsorgung</a> -->
-              </div>
-            </div>
-          </li> 
-        </ul>
-        <nav class="mobile-nav-links"></nav>
-        <div class="backdrop"></div>
-        <button class="menu-icon">&#9776;</button>
-      </div>   
-        <div class="buttons">
-          <div class="angebot">
-            <button onClick="document.getElementById('kontakt-feld').scrollIntoView();">Kostenloses Angebot</button> 
-          </div>
-        </div>
-      </div>
-      
+    <div id="header"></div>
       <div class="hero">
-        <!--<video playsinline autoplay muted loop poster="cake.jpg">
-          <source src="https://video.wixstatic.com/video/11062b_064474acb59e4067b9060d213dc7f6b7/1080p/mp4/file.mp4" type="video/webm">
-          Ihr browser unterstützt den Video-Tag nicht.
-      </video>-->
-        <img src="https://static.wixstatic.com/media/d31ff127fc234a64a3f45b143b7605b1.jpg">
-        <!--<img src="background-hero.jpeg">-->
+        <img src="background-hero.png" alt="Bremen City">
         <div class="content">
-          <h1><strong>Rümpel</strong> nicht alleine - Ruf deine <strong>Helden</strong> !</h1>
+          <h1>Jetzt professionelle <strong>Entrümpelung</strong> bei uns buchen!</h1>
           <br>
           <br>
           <div class="kontakt">
             <a href="mailto: info@example.com" class="mail box"><i class="fa-regular fa-envelope"></i>Sende uns eine E-Mail<!--<p>info@meine-rümpelhelden.de</p>--></a>
-            <a href="tel:123-456-7890" class="tel box"><i class="fa-solid fa-phone"></i>Ruf uns an<!--<p>123-456-7890</p>--></a> 
-            <a href="https://wa.me/<number>" class="whatsapp box"><i class="fa-brands fa-whatsapp"></i>Schreibe uns auf Whatsapp<!--<p>123-456-7890</p>--></a> 
+            <a href="tel:01608748490" class="tel box"><i class="fa-solid fa-phone"></i>Ruf uns an<!--<p>123-456-7890</p>--></a> 
+            <a href="https://wa.me/017631021447" class="whatsapp box"><i class="fa-brands fa-whatsapp"></i>Schreibe uns auf Whatsapp<!--<p>123-456-7890</p>--></a> 
           </div>
         </div>
       </div>
@@ -77,13 +48,26 @@
       
       <div class="uber-uns">
         <div class="text">
-          <h1><strong class="brand">Meine Rümpelhelden</strong> - Ihr Vertrauenswürdiger Partner für <strong>Entrümpelungen</strong></h1>
-          <p>Wir sind ein professionelles Entrümpelungsunternehmen, das effiziente und professionelle Entrümpelungsdienste in Bremen und umzu anbietet. Wir wissen, dass eine Entrümpelung eine stressige und überwältigende Erfahrung sein kann, deshalb sind wir für Sie da. Unser Team aus erfahrenen Fachleuten kümmert sich von Anfang bis Ende um alles und sorgt dafür, dass der Prozess schnell, einfach und stressfrei verläuft.
-      </p>
-          <button onclick="window.location.href='about.html';">Lerne mehr über uns</button>
+          <!-- <h1><strong class="brand">Meine Rümpelhelden</strong> - Ihr Vertrauenswürdiger Partner für <strong>Entrümpelungen</strong></h1>
+          <p>Wir sind ein professionelles Entrümpelungsunternehmen, das effiziente und professionelle Entrümpelungsdienste in Bremen und umzu anbietet. 
+            Wir wissen, dass eine Entrümpelung eine stressige und überwältigende Erfahrung sein kann, deshalb sind wir für Sie da. 
+            Unser Team aus erfahrenen Fachleuten kümmert sich von Anfang bis Ende um alles und sorgt dafür, dass der Prozess schnell, 
+            einfach und stressfrei verläuft.</p> -->
+          <h1><strong style="font-weight: bold; margin-bottom: 1vw;">Engel-Entrümpelung</strong></h1>
+          <h1 style="font-weight: 200; padding-top: 0; margin-bottom: 2vw;">Entrümpelung, Haushaltsauflösung, Seniorenumzüge & mehr</h1>
+          <p>
+            Engel-Entrümpelung ist ein angesehenes Unternehmen, das professionelle Entrümpelungsdienstleistungen in Bremen und Niedersachsen anbietet. 
+            Unsere breit gefächerten Dienstleistungen umfassen unter anderem die Entrümpelung von Privaträumen, Gewerbe- und Büroflächen, 
+            Haushaltsauflösungen, Seniorenumzüge sowie den Ankauf von Nachlässen & mehr. Mit einem engagierten Team und einem starken Fokus auf 
+            Kundenzufriedenheit sind wir die bevorzugte Wahl für Entrümpelungsbedürfnisse.
+          </p>
+          <p style="margin: 20px 0">Wir freuen uns auf sie!</p>
+          <!-- <button onclick="window.location.href='about.html';">Lerne mehr über uns</button> -->
+          <button onclick="document.getElementById('kontakt-feld').scrollIntoView();">Kostenloses und unverbindliches Angebot</button>
         </div>
         <div class="image">
-          <img src="https://static.wixstatic.com/media/ea26fd_fd2d14bc58af4e109522dd08a798820d~mv2_d_6720_4480_s_4_2.jpeg/v1/fill/w_952,h_686,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ea26fd_fd2d14bc58af4e109522dd08a798820d~mv2_d_6720_4480_s_4_2.jpeg%22" alt="Junger Mann der ein Karton trägt">
+          <!--<img src="https://static.wixstatic.com/media/ea26fd_fd2d14bc58af4e109522dd08a798820d~mv2_d_6720_4480_s_4_2.jpeg/v1/fill/w_952,h_686,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ea26fd_fd2d14bc58af4e109522dd08a798820d~mv2_d_6720_4480_s_4_2.jpeg%22" alt="Junger Mann der ein Karton trägt">-->
+          <img src="uber_uns-image.png" alt="Bücherregal">
         </div>
         <!--
         Über uns
@@ -169,23 +153,39 @@
       -->
       </div>
       
-      <div class="dls">
+      <div id="dls">
         <h1>Unsere Dienstleistungen</h1>
         <div class="boxes">
           
-          <div class="entrümpelung box">
-            <img src="https://www.haushaltsaufloesung-muenchen.de/wp-content/uploads/2020/02/wohnungsaufl%C3%B6sung.jpg" alt="Entrümpelungen">
+          <div class="privaträumen box">
+            <img src="Dienstleistungen-Bild.png" alt="Entrümpelungen">
             <div class="text">
-              <h2>Entrümpelung</h2>
-              <button><a href="ser-entruempelung.html">Mehr erfahren</a></button>
+              <h2>Entrümpelung von Privaträumen</h2>
+              <a href="ser-entruempelung.html">Mehr erfahren</a>
             </div>
           </div>
           
           <div class="haushaltsauflösung box">
-            <img src="https://www.sanier.de/wp-content/uploads/images/entruempelung-wohnungsaufloesung-dorazett-adobestock.jpg" alt="Haushaltsauflösung">
+            <img src="Dienstleistungen-Bild.png" alt="Haushaltsauflösung">
             <div class="text">
               <h2>Haushaltsauflösung</h2>
-              <button><a href="ser-haushalt.html">Mehr erfahren</a></button>
+              <a href="ser-haushalt.html">Mehr erfahren</a>
+            </div>
+          </div>
+
+          <div class="gewerbeflächen box">
+            <img src="Dienstleistungen-Bild.png" alt="Gewerbe- und Büroflächen">
+            <div class="text">
+              <h2 style="margin-bottom: 1vw;">Entrümpelung von <br> Gewerbe- und Büroflächen</h2>
+              <a href="ser-entruempelung-gewerbe.html">Mehr erfahren</a>
+            </div>
+          </div>
+          
+          <div class="wohnungsauflösung box">
+            <img src="Dienstleistungen-Bild.png" alt="Wohnungsauflösung">
+            <div class="text">
+              <h2>Wohnungsauflösung</h2>
+              <a href="ser-wohnungsauflösung.html">Mehr erfahren</a>
             </div>
           </div>
           
@@ -223,28 +223,49 @@
         </div>
       </div>
 
-      <div class="warum-wir">
+      <div class="versprechen">
         <!--<img src="https://static.wixstatic.com/media/11062b_516edb6e1aa8425b8ac2689eee44c575~mv2.jpg" alt="Mitarbeiter beim Umzug" width="80%">-->
         <div class="image"></div>
         <div class="container">
-          <div class="content">
-            <h1>Warum Meine Rümpelhelden?</h1>
+          <div class="versprechen_image">
+            <h1>Unser Versprechen</h1>
           </div>
           <div class="boxes">
-            <div class="schnell box">
-              <img src="Held-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
-              <h3>Schnelle und Saubere Erledigung</h3>
+            <div class="sorgfal_respekt box">
+              <img src="Entrümpelung-Person-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
+              <!-- <h3>Schnelle und Saubere Erledigung</h3> -->
+              <h3>Höchste Sorgfalt und Respekt</h3>
+              <p>Wir versprechen, Ihre persönlichen Gegenstände und Erinnerungen stets mit größter Sorgfalt und Respekt zu behandeln.</p>
               <!--Wenn es mal besonders eilig ist, sind wir zur Stelle. Verlassen Sie sich darauf, dass wir flexibel reagieren, selbst wenn Ihr Zeitplan knapp ist.-->
             </div>
-            <div class="diskret box">
-              <img src="Held-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
-              <h3>Professionelles und Erfahrenes Team</h3>
+            <div class="umweltverantwortung box">
+              <img src="Entrümpelung-Person-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
+              <!-- <h3>Professionelles und Erfahrenes Team</h3> -->
+              <h3>Umweltverantwortung</h3>
+              <p>Wir versprechen, umweltfreundliche Entsorgungslösungen anzubieten und Materialien wann immer möglich zu recyceln, um die Umweltauswirkungen zu minimieren.</p>
               <!--In schwierigen Zeiten wie einem Sterbefall achten wir besonders auf Vertraulichkeit. Ihre Privatsphäre ist uns ein hohes Anliegen.-->
             </div>
-            <div class="günstig box">
-              <img src="Held-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
-              <h3>Günstige und Transparente Preise</h3>
+            <div class="vertrauenswürdigkeit box">
+              <img src="Entrümpelung-Person-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
+              <!-- <h3>Günstige und Transparente Preise</h3> -->
+              <h3>Vertrauenswürdigkeit</h3>
+              <p>Unser Versprechen ist, das Vertrauen unserer Kunden zu gewinnen und die erste Wahl für Entrümpelungsdienstleistungen in der Region zu sein.</p>
               <!--Unsere faire Preisgestaltung sorgt dafür, dass Sie erstklassige Entrümpelungsdienste zu einem erschwinglichen Preis erhalten.-->
+            </div>
+            <div class="kundenzentriertheit box">
+              <img src="Entrümpelung-Person-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
+              <h3>Kundenzentriertheit</h3>
+              <p>Unser Versprechen ist, eng mit Ihnen zusammenzuarbeiten, um maßgeschneiderte Lösungen zu bieten, die Ihren individuellen Bedürfnissen gerecht werden.</p>
+            </div>
+            <div class="fair box">
+              <img src="Entrümpelung-Person-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
+              <h3>Faire Preisgestaltung</h3>
+              <p>Wir versprechen faire und transparente Preise, ohne versteckte Gebühren oder unerwartete Kosten.</p>
+            </div>
+            <div class="zufriedenheitsgarantie box">
+              <img src="Entrümpelung-Person-removebg.png" width="80" alt="Meine Rümpelhelden Logo">
+              <h3>Zufriedenheitsgarantie</h3>
+              <p>Wir stehen hinter unserer Dienstleistung und versprechen, dass Sie mit dem Ergebnis zufrieden sein werden.</p>
             </div>
           </div>
         </div>
@@ -308,92 +329,47 @@
         </form>
       </div>
 
-      <!--Oder Slogan entfernen und nur logo aber größer-->
-      
-      <div class="footer">
-        <div class=footer-logo>
-          <!--<img src="https://www.adobe.com/express/learn/blog/media_1d655233eb376c5272e418b6de9c75bd7610aa558.png?width=2000&format=webply&optimize=medium" width="150" alt="HB">-->
-          <!--<h4>HB Entrümpelungen</h4>
-          Mehr Platz für ein besseres Leben!-->
-          <img src="Entrümpelhelden-removebg.png" width="250" alt="HB">
-          <br>© 2023 Meine Rümpelhelden
-        </div>
-          <div class="footer-kontakt">
-             <p class="heading">KONTAKT</p>
-             <br>
-             <p>Wasserstraße 153<br>
-             28325 Bremen</p>
-             <br>
-             <p>Telefon: <a href="">1234 567890</a>
-             <br>Email: <a href="mailto: info@hb-entruempelungen.de">info@hb-entruempelungen.de</a></p>
-          </div>
-          <div class="footer-stunden">
-            <p class="heading">ARBEITSSTUNDEN</p>
-            <br>
-            <p>Mo - Fr: 8:00 - 20:00
-            <br>Samstag: 9:00 - 19:00 
-            <br>Sonntag: 9:00 - 20:00</p>
-            
-          </div>
-          <div class="footer-weiteres">
-            <p class="heading">WEITERES</p>
-            <br>
-            <a href="about.html">Über uns</a>
-            <a href="service.html">Unser Service</a>
-            <a href="">Impressum</a>
-            <!--<a href="faq.html">FAQ</a>-->
-            <a href="">Datenschutzerklärung</a>
-          </div>
-        </div>
-      </div>
-      
-      <!--
-      <div class="footer-2">
-        Copyright © HB Entrümpelungen | <a href="">Impressum</a> | <a href="">Datenschutzerklärung</a>
-      </div>
-      -->
-
+      <div id="footer"></div>
   <script>
-    const menuIcon = document.querySelector('.menu-icon');
-    const mobileNavLinks = document.querySelector('.mobile-nav-links');
-    const navLinks = document.querySelector('.header ul');
-    const backdrop = document.querySelector('.backdrop');
-
-    menuIcon.addEventListener('click', () => {
-    if (mobileNavLinks.classList.contains('show')) {
-        mobileNavLinks.innerHTML = '';
-        mobileNavLinks.classList.remove('show');
+    // const menuIcon = document.querySelector('.menu-icon');
+    // const mobileNavLinks = document.querySelector('.mobile-nav-links');
+    // const navLinks = document.querySelector('.header ul');
+    // const backdrop = document.querySelector('.backdrop');
+    
+    // menuIcon.addEventListener('click', () => {
+    // if (mobileNavLinks.classList.contains('show')) {
+    //     mobileNavLinks.innerHTML = '';
+    //     mobileNavLinks.classList.remove('show');
         
-    } else {
-        mobileNavLinks.innerHTML = '<img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">';
-        mobileNavLinks.innerHTML += navLinks.innerHTML;
-        mobileNavLinks.classList.add('show');
-        backdrop.style.display = 'block';
-    }
-    });
+    // } else {
+    //     mobileNavLinks.innerHTML = '<img src="Entrümpelhelden-removebg.png" width="100" alt="Rümpelhelden" class="header-logo">';
+    //     mobileNavLinks.innerHTML += navLinks.innerHTML;
+    //     mobileNavLinks.classList.add('show');
+    //     backdrop.style.display = 'block';
+    // }
+    // });
 
-    backdrop.addEventListener('click', (event) => {
-    if (event.target === backdrop) { // Check if the backdrop itself was clicked
-        mobileNavLinks.classList.remove('show');
-        backdrop.style.display = 'none';
-    }
-    });
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
+    // backdrop.addEventListener('click', (event) => {
+    // if (event.target === backdrop) { // Check if the backdrop itself was clicked
+    //     mobileNavLinks.classList.remove('show');
+    //     backdrop.style.display = 'none';
+    // }
+    // });
+    // /* When the user clicks on the button, 
+    // toggle between hiding and showing the dropdown content */
+    // function myFunction() {
+    //   document.getElementById("myDropdown").classList.toggle("show");
+    // }
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-      var myDropdown = document.getElementById("myDropdown");
-        if (myDropdown.classList.contains('show')) {
-          myDropdown.classList.remove('show');
-        }
-      }
-    }
-    //# sourceURL=pen.js
+    // // Close the dropdown if the user clicks outside of it
+    // window.onclick = function(e) {
+    //   if (!e.target.matches('.dropbtn')) {
+    //   var myDropdown = document.getElementById("myDropdown");
+    //     if (myDropdown.classList.contains('show')) {
+    //       myDropdown.classList.remove('show');
+    //     }
+    //   }
+    // }
   </script>
 
 </body>

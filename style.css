@@ -3,18 +3,16 @@
     --blue: #0b8df0; */
     /* --bgc: #deedb7; */
     /* --links: #053B50; */
-    /* --header: #EEEEEE ; */
+    /* --links: #EEEEEE ; */
     /*--buttons: #deedb7;*/
-    --header: #222831;
     --buttons: #00ADB5;
     --links: #EEEEEE;
     --bgc: #00ADB5;
 
-    --header: #F9FAF8;/*#F6F1F1*/
     --buttons: #3882F6;
     --links: #F9FAF8;/*#FBF8F1*/
     --bgc: #1F2937;/*#19A7CE*/
-    --dark: ;
+    --darker-white: #cdcdcd;
   }
   
   *{
@@ -28,7 +26,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background: var(--header);
+    background: var(--bgc);
     display: flex;
     justify-content: space-between;
     font-size: 18px;
@@ -36,6 +34,8 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     padding-left: 2vw;
     z-index: 99;
+    height: 111px;
+    transition: all 0.4s ease;
   }
   
   .header .first{
@@ -46,13 +46,17 @@
   
   .header a{
     text-decoration: none;
-    color: var(--dark);
+    color: var(--links);
     cursor: pointer;
     /* text-shadow: .4px .4px var(--links); */
     padding: 10px;
     border-radius: 100px;
   }
   
+  .header img{
+    transition: all 4 ease;
+  }
+
   .header ul{
     list-style: none;
     display: flex;
@@ -61,10 +65,10 @@
   }
   
   .header ul a:hover{
-    border-bottom: var(--dark) solid 2px;
-    border-radius: 100px;
+    border-bottom: var(--links) solid 3px;
+    border-radius: 0;
   }
-  
+
   .header .angebot button{
     border-radius: 0;
     padding: 15%;
@@ -73,13 +77,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 125px;
   }
   
   .header .angebot button:hover{
-    background-color: var(--header);
-    color: var(--dark);
-    transition: color 0.4s, background-color 0.4s;
+    background-color: var(--bgc);
+    color: var(--links);
+    transition: all 0.4s ease;
+    box-shadow: #1f293780 0 8px 15px;
+    transform: none;
   }
   
   .dropdown {
@@ -112,7 +117,8 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
     line-height: 50px;
-    color: var(--header)
+    color: var(--links);
+    width: max-content;
   }
   
 
@@ -136,36 +142,35 @@
     border-top: 6px solid var(--links); /* Change the color as needed */
   }
   
-  .dropdown-text{
-    width: 130px;
-  }
-  
   button{
     touch-action: manipulation;
-    transition: background-color 0.4s;
+    transition: all 0.4s;
     text-decoration: none;
     outline: none;
     border-style: none;
     cursor: pointer;
-    color: var(--links);
+    color: var(--bgc);
     font-weight: 500;
-    background-color: var(--bgc);
+    background-color: var(--links);
     border-radius: 8px;
     padding: 10px 18px;
     font-size: 18px;
   }
   
   button:hover{
-    background-color: var(--links);
-    color: var(--header);
+    /* background-color: var(--links);
+    color: var(--links); */
+    box-shadow: #1f293780 0 8px 15px;
+    transform: translateY(-2px);
+    transition: all 0.2s;
   }
   
   .menu-icon {
     display: none;
     background: none;
     border: none;
-    color: var(--bgc);
-    font-size: 24px;
+    color: var(--links);
+    font-size: 36px;
     cursor: pointer;
   }
   
@@ -173,7 +178,7 @@
     display: none;
     width: 35px;
     height: 5px;
-    background-color: var(--header);
+    background-color: var(--links);
     margin: 6px 6px;
   }*/
   
@@ -233,13 +238,13 @@
     top: 0;
     left: 0;
     z-index: -10;
+    
   }
   
   .hero{
     position: relative;
-    margin-top: 110px;
     height: 100%;
-  
+    margin-top: 60px;
     /*background-image: url("https://sumo-entruempelung.de/wp-content/uploads/2022/01/entru%CC%88mpelungsunternehmen-1-1024x682.jpg");
     */
   }
@@ -278,17 +283,18 @@
   }
   
   .hero h1{
+    margin-top: 60px;
     line-height: normal;
     max-width: 800px;
     font-weight: 600;
     font-size: 70px;
     color: var(--links);
     overflow-wrap: break-word;
+    font-weight: 100;
   }
   
   .hero h1 strong{
-    font-weight: 1000;
-    
+    font-weight: bold;
   }
   
   .hero .kontakt{
@@ -327,20 +333,22 @@
   }
   
   .hero .kontakt .mail{
-    background-color: var(--dark);
+    background-color: var(--bgc);
     color: var(--links);
   }
   
   .hero .kontakt .whatsapp{
     background-color: var(--links);
-    color: var(--dark);
+    color: var(--bgc);
   } */
   
   .hero .kontakt .box:hover{
     /* font-size: 18px;
     margin: -1px 0 1px -1px;
-    height: 3em; */
-    transform: scale(1.1);
+    height: 3em; 
+    transform: scale(1.1);*/
+    box-shadow: #1f293780 0 8px 15px;
+    transform: translateY(-5px);
     transition: all 0.3s;
   }
   
@@ -374,79 +382,75 @@
     }
     
   }
-  
+
   .uber-uns{
-    font-size: 40px;
     display: flex;
-    align-items: flex-start;
-    background: var(--bgc);
-  
+    background: var(--links);
+    align-items: center;
   }
   
   .uber-uns .image{
     overflow: hidden;
     width: 50vw;
-    height: 100vh;
+    height: 90vh;
   }
   
   .uber-uns img{
-    height: 100vh;
+    height: 90vh;
+    width: 100%;
   }
   
   .uber-uns .text{
     width: 50vw;
     overflow-wrap: break-word;
-    color: var(--links);
+    color: var(--bgc);
   }
-  
+
   .uber-uns .text .brand{
-    color: var(--header);
+    color: var(--bgc);
   }
-  
-  /* .uber-uns .text strong{
-    text-shadow: .5px .5px 1px var(--links);
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.19);
-  } */
   
   .uber-uns .text h1{
-    padding: 6vw;
-    padding-bottom: 15px;
-    line-height: 52px;
-    font-size: 39px;
+    padding: 3vh 6vw 15px 6vw;
+    line-height: 3vw;
+    font-size: 3vw;
   }
   
   .uber-uns .text p{
     padding: 0 6vw;
-    line-height: 28px;
-    font-size: 20px;
-    color: var(--links);
-    text-shadow: .1px .1px 1px var(--links);
+    line-height: 1.5vw;
+    font-size: 1.5vw;
+    color: var(--bgc);
+    text-shadow: .1px .1px 1px var(--bgc);
   }
   
   @media screen and (max-width: 440px) {
     .uber-uns .text h1{
-      font-size: 9vw;
+      font-size: 6vw;
+      line-height: 6.5vw;
     }
   
   }
-  
+
   .uber-uns .text button{
-    background-color: var(--links);
-    color:var(--bgc);
+    background-color: var(--bgc);
+    color:var(--links);
     font-weight: 600;
-    border-radius: 0;
-    font-size: 16px;
+    border-radius: 2px;
+
     padding: 15px 10px;
     margin-left: 6vw;
     margin-bottom: 3vh;
   }
   
   .uber-uns .text button:hover{
-    background-color: var(--bgc);
-    color: var(--header);
+    /* background-color: var(--links);
+    color: var(--bgc); */
+    box-shadow: #1f293780 0 8px 15px;
+    transform: translateY(-2px);
   }
   
-  @media screen and (max-width: 1110px) {
+  @media screen and (max-width: 1240px) {
     .uber-uns .image{
       display: none;
     }
@@ -454,6 +458,25 @@
     .uber-uns .text{
       width: 100vw;
     }
+
+    .uber-uns .text p{
+      font-size: 2vw;
+      line-height: 2vw;
+    }
+
+  } 
+  
+  @media screen and (max-width: 650px) {
+    .uber-uns .text p{
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .uber-uns .text h1{
+      font-size: 6vw;
+      line-height: 6vw;
+    }
+
   }
   
   .uber-uns-boxes{
@@ -475,20 +498,20 @@
     font-size: 25px;
   }
   
-  .dls{
+  #dls{
     text-align:center;
     padding-top: 50px;
-    background-color: var(--header);
+    background-color: var(--bgc);
   }
   
-  .dls h1{
+  #dls h1{
     font-size: 5vw;
     overflow-wrap: break-word;
-    color: var(--bgc);
+    color: var(--links);
     text-shadow: 0 0 .1px rgba(0, 0, 0, 0.2);
   }
   
-  .dls .boxes{
+  #dls .boxes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -496,74 +519,72 @@
     text-align: left;
     margin-top: 50px;
   }
-  
-  .dls img{
+
+  #dls img{
     width: 40vw;
     height: 20vw;
   }
   
-  .dls .boxes .box {
+  #dls .boxes .box {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: var(--bgc);
-    color: var(--links);
+    background-color: var(--links);
+    color: var(--bgc);
     /*cursor: pointer;
     only if somehow manage to make it clickable*/
   }
-  
-  .dls .boxes .box:hover{
-    margin-top: -2px;
-  }
-  
-  .dls .boxes .box .text{
+
+  #dls .boxes .box .text{
     padding: 4vw;
-    padding-right: 0;
     overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .dls .boxes h2{
-    font-size: 2.5vw;
+  #dls .boxes h2{
+    font-size: 2vw;
     margin-bottom: 3vw;
+    width: fit-content;
+    text-align: center;
   }
   
-  .dls button{
-    background-color: var(--links);
-    color: var(--bgc);
-    border-radius: 0;
+  #dls a{
+    background-color: var(--bgc);
+    color: var(--links);
+    border-radius: 100px ;
     font-size: 1.5vw;
     padding: 1.5vw 2.5vw;
-  }
-  
-  .dls button:hover{
-    color: var(--links);
-    background-color: var(--bgc);
-  }
-  
-  .dls button a{
     text-decoration: none;
-    all: unset;
+    transition: all 0.2s;
+    touch-action: manipulation;
+    outline: none;
+    border-style: none;
+    font-weight: 500;
+  }
+  
+  #dls a:hover{
+    /* color: var(--bgc);
+    background-color: var(--links); */
+    box-shadow: #1f293780 0 8px 15px;
+    transform: translateY(-2px);
   }
   
   @media screen and (max-width: 500px){
-    .dls button{
-      font-size: 3vw;
-      padding: 3vw 4vw;
-    }
-  
-    .dls h1{
+    #dls h1{
       font-size: 10vw;
     }
     
   }
-  
-  .warum-wir{
+
+  .versprechen{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--bgc);
   }
   
-  .warum-wir .content{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)) , url("https://static.wixstatic.com/media/11062b_516edb6e1aa8425b8ac2689eee44c575~mv2.jpg");
+  .versprechen .versprechen_image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)) , url("Unsere_versprechen-Bild.png");
     width: 81vw;
     height: 40vw;
     background-size: cover;
@@ -572,7 +593,13 @@
     align-items: flex-end;
   }
   
-  .warum-wir .container .content h1{
+  .versprechen .container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .versprechen .container .versprechen_image h1{
     text-align: center;
     max-width: 25vw;
     font-size: 3vw;
@@ -580,7 +607,7 @@
     margin-bottom: 10vw;
   }
   
-  .warum-wir .container .boxes{
+  .versprechen .container .boxes{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -588,69 +615,91 @@
     flex-wrap: wrap;
   }
   
-  .warum-wir .container .box{
+  .versprechen .container .box{
     display: flex;
     flex-direction: column;/*if not logo then delete*/
     justify-content: center;
     align-items: center;
     width: 27vw;
-    height: 11vw;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    height: 16vw;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+    border-radius: 40px;
   }
   
-  .warum-wir .container .boxes img{
+  .versprechen .container .boxes img{
     width: 5vw;
   }
   
-  .warum-wir .container .boxes h3{
+  .versprechen .container .boxes h3{
     font-size: 2vw;
     font-stretch: 100%;
     line-height: 3vw;
     font-optical-sizing: auto;
   }
   
-  .warum-wir .schnell{
-    background: var(--header);
-    color: var(--buttons);
+  .versprechen .container .boxes p{
+    font-size: 1.3rem;
+    font-stretch: 100%;
+    line-height: 1.5rem;
+    font-optical-sizing: auto;
   }
-  
-  .warum-wir .diskret{
-    background: var(--buttons);
-    color: var(--links);
-  }
-  
-  .warum-wir .günstig{
+
+  .versprechen .sorgfal_respekt{
     background: var(--links);
     color: var(--bgc);
   }
   
+  .versprechen .umweltverantwortung{
+    background: var(--bgc);
+    color: var(--links);
+  }
+  
+  .versprechen .vertrauenswürdigkeit{
+    background: var(--links);
+    color: var(--bgc);
+  }
+
+  .versprechen .kundenzentriertheit{
+    background: var(--bgc);
+    color: var(--links);
+  }
+  
+  .versprechen .fair{
+    background: var(--links);
+    color: var(--bgc);
+  }
+
+  .versprechen .zufriedenheitsgarantie{
+    background: var(--bgc);
+    color: var(--links);
+  }
   
   @media screen and (max-width: 1000px) {
     
-    .warum-wir .container .content h1{
+    .versprechen .container .versprechen_image h1{
       max-width: 50vw;
       font-size: 7vw;
     }
     
-    .warum-wir .container{
-      width: 100vw;
+    .versprechen .container{
+      width: 90vw;
     }
     
-    .warum-wir .content{
+    .versprechen .versprechen_image{
       height: 50vw;
-      width: 100vw;
+      width: 90vw;
     }
   
-    .warum-wir .container .boxes img{
+    .versprechen .container .boxes img{
       width: 12vw;
     }
   
-    .warum-wir .container .boxes .box{
-      width: 100vw;
-      height: 30vw;
+    .versprechen .container .boxes .box{
+      width: 90vw;
+      height: 50vw;
     }
     
-    .warum-wir .container .boxes .box h3{
+    .versprechen .container .boxes .box h3{
       width: 80vw;
       line-height: 5vw;
       font-size: 5vw;
@@ -661,7 +710,7 @@
   
   
   /*
-  .warum-wir .boxes{
+  .versprechen .boxes{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -671,7 +720,7 @@
     
   }
   
-  .warum-wir .box{
+  .versprechen .box{
     border-radius: 5px;
     width: 270px;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
@@ -680,7 +729,7 @@
     font-size: 17px;
   }
   
-  .warum-wir h3{
+  .versprechen h3{
     font-size: 28px;
     line-height: 70px;
   
@@ -688,7 +737,7 @@
   */
   
   .ablauf{
-    background-color: var(--header);
+    background-color: var(--links);
   }
   
   .ablauf h1{
@@ -711,7 +760,7 @@
     width: 25%;
     max-width: 25%;
     font-size: larger;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
     height: 30vw;
   }
   
@@ -732,11 +781,11 @@
   }
   
   .ablauf .boxes .schritt-1{
-    background-color: var(--header);
-    color: var(--buttons);
+    background-color: var(--links);
+    color: var(--bgc);
   }
   .ablauf .boxes .schritt-2{
-    background-color: var(--buttons);
+    background-color: var(--bgc);
     color: var(--links);
   }
   .ablauf .boxes .schritt-3{
@@ -744,8 +793,8 @@
     color: var(--bgc);
   }
   .ablauf .boxes .schritt-4{
-    background-color: var(--header);
-    color: var(--buttons);
+    background-color: var(--bgc);
+    color: var(--links);
   }
   
   
@@ -797,7 +846,7 @@
   }
   
   #kontakt-feld .form{
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 20px 25px;  
     line-height: 25px;
@@ -810,7 +859,7 @@
   #kontakt-feld .form input{
     border-radius: 1px;
     border: none;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
     font-size: 16px;
     width: 97.6%;
     padding: 5px;
@@ -820,13 +869,15 @@
   
   #kontakt-feld .form button{
     border-radius: 0;
-    background-color: var(--header);
-    color: var(--buttons);
+    background-color: var(--links);
+    color: var(--bgc);
   }
   
   #kontakt-feld .form button:hover{
-    background-color: var(--bgc);
-    color: var(--links);
+    /* background-color: var(--bgc);
+    color: var(--links); */
+    box-shadow: #1f293780 0 8px 15px;
+    transform: translateY(-2px);
   }
   
   
@@ -843,7 +894,7 @@
   .about h1{
     background-color: var(--bgc);
     color: var(--links);
-    height: 40vw;
+    height: 30vw;
     width: 50vw;
     max-width: 50vw; 
     font-size: 6vw;
@@ -852,11 +903,11 @@
   
   .about p{
     font-size: 25px;
-    background-color: var(--header);
-    color: var(--links);
+    background-color: var(--links);
+    color: var(--bgc);
     width: 50vw;
     max-width: 50vw;
-    height: 40vw;
+    height: 30vw;
     padding: 7vw;
   }
   
@@ -869,7 +920,7 @@
     text-decoration: none;
   }
   
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1500px) {
     .about{
       flex-direction: column;
       background-color: var(--bgc);
@@ -911,39 +962,46 @@
   
   /*Service's*/
   .ser-hero{
-    margin-top: 111px;
     display: flex;
+    flex-direction: column;
   }
-  
+
+  .ser-hero button{
+    background-color: var(--bgc);
+    color: var(--links)
+  }
+
   .ser-hero h1{
+    background-color: rgba(0, 0, 0, 0.6);
     background-color: var(--bgc);
     color: var(--links);
-    height: 25vw;
-    width: 50vw;
-    max-width: 50vw; 
     font-size: 6vw;
-    padding: 7vw 3.7vw;
+    padding: 4vw;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
   }
   
-  .ser-hero p{
-    font-size: 25px;
-    background-color: var(--header);
-    color: var(--links);
-    width: 50vw;
-    max-width: 50vw;
-    height: 25vw;
-    padding: 7vw;
+  .ser-hero img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .ser-hero{
+    position: relative;
+    margin-top: 70px;
+    height: 100%;
   }
   
-  .erplg h1{
-    font-size: 5vw;
-  }
-  
-  .hh h1{
-    font-size: 4vw;
-  }
-  .bsd h1{
-    font-size: 3vw;
+  .ser-hero .ser-text{
+    font-size: 1.5vw;
+    background-color: var(--links);
+    color: var(--bgc);
+    /* height: 25vw; */
+    padding: 4vw;
   }
   
   @media screen and (max-width: 1400px) {
@@ -960,14 +1018,10 @@
   
     .ser-hero h1{
       padding: 5vw 50vw 3vw 7vw;
-      width: 40vw;
+      width: 100%;
       font-size: 7vw;
     }
-    
-    .ser-hero h1{
-      font-size: 10vw;
-    }
-  
+
     .ser-hero p{
       width: auto; 
       font-size: 3vw;
@@ -995,15 +1049,15 @@
   /*FOOTER*/
   
   .footer{
-    background: var(--header);
+    background: var(--bgc);
     color: var(--links);
     display: flex;
     justify-content: space-between;
     line-height: 30px;
-    padding: 50px;
     flex-wrap: wrap;
-    font-size: 20px;
+    font-size: 18px;
     gap: 50px;
+    padding: 3vw 10vw;
   }
   
   /*
@@ -1015,7 +1069,7 @@
   */
   
   .footer .heading{
-    color: var(--bgc)
+    color: var(--darker-white);
   }
   
   .footer a{
@@ -1024,7 +1078,7 @@
   }
   
   .footer a:hover{
-    text-decoratioN: underline;
+    text-decoration: underline;
   }
   
   .footer .footer-kontakt .tel{
@@ -1041,6 +1095,7 @@
     .header{
       flex-direction: column-reverse;
       padding: 0;
+      height: 140px;
     }
   
     .header .first{
@@ -1050,13 +1105,13 @@
       justify-content: space-between;
       align-items: center;
       height: 90px;
-  
+      padding: 0
     }
   
     .header .buttons .angebot button{
       width: 100vw;
-      max-height: 50px;
-      padding: 0;
+      height: 50px;
+      padding: 0px;    
     }
   
     .header ul{
@@ -1104,21 +1159,20 @@
       z-index: 9998;
     }
     
-    .dls .boxes img{
+    #dls .boxes img{
       width: 90vw;
       height: 45vw;
     }
-    
-    .dls .boxes .box:hover img{
-      width: 94vw;
-      height: 47vw;
-    }
   
-    .dls .boxes .box h2{
+    #dls a{
+      font-size: 3vw;
+    }
+
+    #dls .boxes .box h2{
       font-size: 5vw;
     }
   
-    .dls .boxes .box button{
+    #dls .boxes .box button{
       font-size: 3vw;
     }
   
@@ -1127,8 +1181,7 @@
     }
   
     .ser-hero{
-      margin-top: 140px;
+      margin-top: 120px;
     }
   
-  }
-  
+}
