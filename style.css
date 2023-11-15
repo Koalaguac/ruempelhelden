@@ -377,7 +377,6 @@
   
   @media screen and (max-width: 640px) {
     .hero h1{
-      margin-top: 20px;
       font-size: 10vw;
     }
     
@@ -429,6 +428,10 @@
       font-size: 6vw;
       line-height: 6.5vw;
     }
+
+    .uber-uns .text button{
+      font-size: 16px;
+    }
   
   }
 
@@ -437,9 +440,8 @@
     color:var(--links);
     font-weight: 600;
     border-radius: 2px;
-
     padding: 15px 10px;
-    margin-left: 6vw;
+    margin: 0 6vw;
     margin-bottom: 3vh;
   }
   
@@ -914,10 +916,12 @@
   .about a{
     font-weight: bold;
     color: var(--bgc);
+    text-decoration: underline;
   }
   
   .about a:hover{
     text-decoration: none;
+    cursor: pointer;
   }
   
   @media screen and (max-width: 1500px) {
@@ -1018,7 +1022,6 @@
   
     .ser-hero h1{
       padding: 5vw 50vw 3vw 7vw;
-      width: 100%;
       font-size: 7vw;
     }
 

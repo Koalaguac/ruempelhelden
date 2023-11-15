@@ -72,19 +72,21 @@ window.onscroll = function() {
       image.style.width = "100px"
     }
   } else{
-    // if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60){
-    //   header.style.height = "60px";
-    //   button.style.padding = "0px";
-    //   button.style.height = "30px";
-    //   image.src = "Entrümpelung-Person-removebg.png"
-    //   image.style.width = "50px"
-    //   image.style.transition = "all 0.4s"
-    // } else {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60){
+      document.getElementsByClassName("first")[0].style.height = "45px";
+      header.style.height = "70px";
+      button.style.padding = "0px";
+      button.style.height = "25px";
+      image.src = "Entrümpelung-Person-removebg.png"
+      image.style.width = "45px"
+      image.style.transition = "all 0.4s"
+    } else {
+      document.getElementsByClassName("first")[0].style.height = "90px";
       header.style.height = "140px";
       button.style.height = "50px";
       image.src = "Logo_Engel-Entrümpelung_removebg.png"
       image.style.width = "100px"
-    // }
+    }
   }
 };
 
